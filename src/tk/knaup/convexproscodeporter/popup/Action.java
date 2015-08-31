@@ -26,7 +26,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
 
-import prossensorssetupwizard.performconfiguration.PerformEdits;
+import convexproscodeporter.PerformEdits;
 
 public class Action implements IObjectActionDelegate {
 
@@ -54,7 +54,7 @@ public class Action implements IObjectActionDelegate {
 			shell,
 			"Convex_PROS_Code_Porter",
 			"Port was executed.");
-		PerformEdits.performConfiguration();
+		PerformEdits.performPort();
 	}
 
 	/**

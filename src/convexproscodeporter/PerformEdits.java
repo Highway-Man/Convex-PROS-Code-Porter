@@ -34,7 +34,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 
-import tk.knaup.prossensorssetupwizard.popup.actions.Selection;
+import tk.knaup.convexproscodeporter.popup.Selection;
 
 //adds/replaces code in main.h and init.c
 public class PerformEdits {
@@ -79,18 +79,14 @@ public class PerformEdits {
 	}
 
 	// perform three edits; code needs to go in three places
-	public static void performConfiguration() {
+	public static void performPort() {
 
 		// add most sensor code to initialize()
-		String newContentInit = SensorsSetup.getAllSensorCode("init.c")
-				+ "\n void initialize() { \n"
-				+ SensorsSetup.getAllSensorCode("initialize");
+		String newContentInit = "";
 		// add sensor structs? to main.h
-		String newContentMain = "void operatorControl(); \n \n"
-				+ SensorsSetup.getAllSensorCode("main.h");
+		String newContentMain = "";
 		// set port states in initializeIO()
-		String newContentInitIO = "void initializeIO() {\n"
-				+ SensorsSetup.getInitIOCode();
+		String newContentInitIO = "";
 
 		// perform the edits
 		try {
